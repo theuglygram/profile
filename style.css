@@ -1,0 +1,192 @@
+/* i added border box */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content-wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+/* left side bar */
+/* i changed from 1fr 1fr to repeat */
+.contents {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(500px, auto);
+    grid-gap: 30px;
+}
+
+.profile-img img {
+    width: 300px;
+    height: 250px;
+    border: 10px solid #fff;
+
+}
+
+.contents button {
+    padding-top: 15px;
+    font-size: 24px;
+    padding-bottom: 15px;
+    background: #FFFFFF;
+    color: #222;
+    border: none;
+    border-radius: 2px;
+    width: 300px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+/* i changed the height */
+.profile-img {
+    background: #05B993 url(bg.svg) right;
+    height: 100%;
+    width: 100%;
+
+
+}
+
+/* RIGHT SIDE */
+/* i added heigh, changed width to 100% and added the properties from 1024px to it,, i also removed the margin top, added flex, added flex start */
+.content-holder {
+
+    /* padding:0px 100px 50px 100px !important; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px 15px;
+}
+
+.content-holder p {
+    width: 100%;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* i added flex direction */
+.skills-holder {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.skills {
+    background: #556270;
+    display: block;
+    max-width: 100%;
+
+    color: #fff;
+    padding: 5px 30px 5px 5px;
+    border-radius: 2px;
+    margin: 0 5px 5px 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* the width was set to 800px */
+.line {
+    background: #05B993;
+    margin-top: 20px;
+    width: 100%;
+    border: 2px solid #05B993;
+    margin-bottom: 10px;
+
+}
+
+.find {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: 40px;
+
+}
+
+/* i added flex to the icons */
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+.fab {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 0 5px 0 0;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.fa-twitter {
+    color: rgb(29, 161, 242);
+
+
+}
+
+.fa-facebook-f {
+    color: blue;
+}
+
+.fa-instagram {
+    color: #c32aa3;
+}
+
+.name-1 {
+    display: none;
+}
+
+/*-------------media queries--------------*/
+/* i cleared other queries */
+
+@media only screen and (max-width:790px) {
+    .contents {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+    }
+
+    .skills-holder {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        /* align-items: flex-start;
+        justify-content: center; */
+    }
+
+}
